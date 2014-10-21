@@ -1,0 +1,47 @@
+<link rel='import' href='../bool-editor/bool-editor.html'>
+<link rel='import' href='../date-editor/date-editor.html'>
+<link rel='import' href='../time-editor/time-editor.html'>
+<link rel='import' href='../date-time-editor/date-time-editor.html'>
+<link rel='import' href='../double-editor/double-editor.html'>
+<link rel='import' href='../int-editor/int-editor.html'>
+<link rel='import' href='../list-editor/list-editor.html'>
+<link rel='import' href='../string-editor/string-editor.html'>
+<link rel='import' href='../file-editor/file-editor.html'>
+<link rel='import' href='../complex-editor/complex-editor.html'>
+<polymer-element name="property-editor">
+  <template>
+    <style>
+      @host {
+        :scope {
+          display: block;
+          padding-top: 0;
+          padding-bottom: 20px;
+        }
+      }
+      
+      #name {
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+      
+      .model-link {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      
+      .editor {
+        width: 100%;
+      }
+      
+      .editor input {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+      }
+    </style>
+    <div id='name'>{{ propName }}:</div>
+    <span id='editor'></span>
+  </template>
+  <script type="application/dart" src='property-editor.dart'></script>
+</polymer-element>

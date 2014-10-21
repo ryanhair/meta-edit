@@ -1,0 +1,19 @@
+<link rel='import' href='../property-editor/property-editor.html'>
+
+<polymer-element name="complex-editor">
+  <template>
+    <style>
+      @host {
+        :scope {
+          display: block;
+          padding:50px;
+        }
+      }
+    </style>
+    <template repeat='{{ variable in modelVariables }}' if='{{ modelVariables != null }}'>
+      <property-editor name='{{ variable.name }}' propertyType='{{ variable.property }}' owner='{{ variable.owner }}' itemOpened='{{ openItem }}'></property-editor>
+    </template>
+    <div id='simpleEditor'></div>
+  </template>
+  <script type="application/dart" src='complex-editor.dart'></script>
+</polymer-element>

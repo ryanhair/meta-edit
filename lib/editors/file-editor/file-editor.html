@@ -1,0 +1,12 @@
+<polymer-element name="file-editor">
+  <template>
+    <input id='uploader' type='file' on-change='{{ updateFile }}' />
+    <template if='{{ value != null }}'>
+      <div>Current File: {{ value.name }}</div>
+    </template>
+    <template if='{{ src != null }}'>
+      <img src='{{ src }}' />
+    </template>
+  </template>
+  <script type="application/dart" src="file-editor.dart"></script>
+</polymer-element>

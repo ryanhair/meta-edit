@@ -1,0 +1,8 @@
+<link rel='import' href='packages/meta_edit/editors/model-editor/model-editor.html'>
+<polymer-element name="crud-editor">
+  <template>
+    <model-editor model='{{ carlots }}'></model-editor>
+    <button on-click='{{ printData }}'>Print</button>
+  </template>
+  <script type="application/dart" src="crud-editor.dart"></script>
+</polymer-element>

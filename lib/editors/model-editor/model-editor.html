@@ -1,0 +1,49 @@
+<link rel='import' href='../property-editor/property-editor.html'>
+
+<polymer-element name="model-editor">
+  <template>
+    <style>
+      @host {
+        :scope {
+          display: block;
+          padding: 50px;
+        }
+      }
+      
+      .breadcrumbs {
+        height: 30px;
+      }
+      
+      .breadcrumbs .breadcrumb {
+        padding: 0;
+        padding-right: 10px;
+        background-color: white;
+        color: #bbbbbb;
+        margin: 0;
+        color: blue;
+        cursor: pointer;
+      }
+      
+      .title {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      
+      .property {
+        margin-bottom: 12px;
+      }
+    </style>
+    <div class='breadcrumbs'>
+      <template repeat='{{ item in breadcrumbs }}'>
+        <span class='breadcrumb' on-click='{{ popTo }}' index='{{ modelStack.indexOf(item) }}'>
+          {{ getType(item) }}
+        </span>
+      </template>
+    </div>
+    <template if='{{ modelStack.length > 0 }}'>
+      <div class='title'>{{ getType(modelStack[modelStack.length - 1]) }}</div>
+    </template>
+    <div id='editor'></div>
+  </template>
+  <script type="application/dart" src='model-editor.dart'></script>
+</polymer-element>

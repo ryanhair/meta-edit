@@ -1,0 +1,76 @@
+html {
+  margin: 0;
+  height: 100%;
+  background-color: #F8F8F8;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 0 auto 0 auto;
+  width:800px;
+  min-height:100%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .2);
+  background-color: white;
+}
+
+h1, p {
+  color: #333;
+}
+
+#sample_container_id {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.btn-right {
+  vertical-align: top;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -4px;
+  border-left: 1px solid #777;
+}
+
+.edit {
+  display: inline-block;
+}
+
+.edit .primitiveInput {
+  display: inline-block;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+}
+
+.field-label {
+  display:inline-block;
+  vertical-align:top;
+  line-height:30px;
+}
+
+.indent {
+  margin-top:10px;
+  font-size: 15px;
+}
+
+.indent .btn-right {
+  line-height:12px;
+}
+
+.indent span {
+  padding: 2px 6px;
+}
+
+.indent .btn {
+  font-size:10px;
+  line-height:15px;
+  padding:0px 5px;
+  vertical-align: middle;
+}

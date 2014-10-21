@@ -1,0 +1,8 @@
+name: meta_edit
+description: Crud Editor
+dependencies:
+  browser: any
+  js: any
+  meta: any
+  polymer: any
+  unittest: any
